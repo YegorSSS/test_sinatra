@@ -1,0 +1,9 @@
+<pre>
+	<%= Time.new %>
+	<%= @m %>
+</pre>
+<form action="/" method="post">
+	<input type="hidden" name="time" value="<%= Time.new %>">
+	<input type="hidden" name="info" value="<%= @m %>">
+	<button>Save</button>
+</form>

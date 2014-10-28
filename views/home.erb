@@ -1,0 +1,11 @@
+<a href="/memory">Memory</a><br>
+<a href="/disk">Disk</a>
+	<% @stat.each do |i| %>
+		<hr>
+		<%= i.time %> 
+		<pre><%= i.info %></pre>
+		<form action="/delete" method="post">
+			<input name="time" type="hidden" value="<%= i.time %>">
+			<button>Удалить</button>
+		</form>
+	<% end %>
